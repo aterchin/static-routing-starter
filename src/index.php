@@ -4,12 +4,17 @@ include '../AltoRouter.php';
 $router = new AltoRouter();
 $router->setBasePath('/static-routing-starter/src');
 
+// require autoload for Twig
+require_once '../vendor/autoload.php';
+$loader = new Twig_Loader_Filesystem('templates');
+$twig = new Twig_Environment($loader);
+
 /* Setup the URL routing. This is production ready. */
 // Main routes that non-customers see
-$router->map('GET','/', 'pages/home.php', 'home');
-$router->map('GET','/home', 'pages/home.php', 'home-home');
-$router->map('GET','/contact', 'pages/contact.php', 'contact');
-$router->map('GET','/about', 'pages/about.php', 'about');
+$router->map('GET','/', 'home', 'home');
+$router->map('GET','/home', 'home', 'home-home');
+$router->map('GET','/contact', 'contact', 'contact');
+$router->map('GET','/about', 'about', 'about');
 
 // Special (payments, ajax processing, etc)
 //$router->map('GET','/charge/[*:customer_id]/','charge.php','charge');
@@ -31,10 +36,12 @@ $match = $router->match();
 </pre>
 */
 if($match) {
-  require $match['target'];
+  echo $twig->render($match['target'] . '.html.twig', array(
+    'name' => 'Adam')
+  );
 }
 else {
   header("HTTP/1.0 404 Not Found");
-  require 'pages/404.html';
+  echo $twig->render('404.html.twig', array());
 }
 ?>

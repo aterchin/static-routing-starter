@@ -40,6 +40,7 @@ Desktop.ini
 $RECYCLE.BIN/
 
 # node, composer, bower
+composer.lock
 vendor
 node_modules
 bower_components
