@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    {% block head %}
+      <!-- Custom CSS -->
+      <link href="css/main.css" rel="stylesheet">
+    
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+          <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    
+      <script src="js/lib/jquery-3.1.1.min.js"></script>
+      <script src="js/dist/production.js"></script>
+      <title>Website Name | {% block title %}{% endblock %}</title>
+    {% endblock %}
+  </head>
+  <body>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      {% block footer %}
+        &copy; Copyright 2016 mysite.com
+      {% endblock %}
+    </div>
+  </body>
+</html>

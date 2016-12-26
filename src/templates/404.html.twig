@@ -1,11 +1,9 @@
-<!doctype html>
-<html class="no-js">
-  <head>
-    <title>404</title>
-  </head>
-  <body>
-    <h1>
-      not found
-    </h1>
-  </body>
-</html>
+{% extends "layouts/base.html.twig" %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+  <h1>{{ title }}</h1>
+{% endblock %}
