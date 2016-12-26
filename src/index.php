@@ -9,12 +9,37 @@ require_once '../vendor/autoload.php';
 $loader = new Twig_Loader_Filesystem('templates');
 $twig = new Twig_Environment($loader);
 
-/* Setup the URL routing. This is production ready. */
-// Main routes that non-customers see
-$router->map('GET','/', 'home', 'home');
-$router->map('GET','/home', 'home', 'home-home');
-$router->map('GET','/contact', 'contact', 'contact');
-$router->map('GET','/about', 'about', 'about');
+/**
+ * URL routes array
+ *
+ * route_name is array key
+ */
+$routes = array(
+  'home' => array(
+    'path' => '/',
+    'template' => 'home',
+    'title' => 'Homepage'
+  ),
+  'home_home' => array(
+    'path' => '/home',
+    'template' => 'home',
+    'title' => 'Homepage'
+  ),
+  'about' => array(
+    'path' => '/about',
+    'template' => 'about',
+    'title' => 'About'
+  ),
+  'contact' => array(
+    'path' => '/contact',
+    'template' => 'contact',
+    'title' => 'Contact'
+  )
+);
+
+foreach ($routes as $name => $route) {
+  $router->map('GET', $route['path'], $route['template'], $name);
+}
 
 // Special (payments, ajax processing, etc)
 //$router->map('GET','/charge/[*:customer_id]/','charge.php','charge');
@@ -36,12 +61,13 @@ $match = $router->match();
 </pre>
 */
 if($match) {
+  $name = $match['name'];
   echo $twig->render($match['target'] . '.html.twig', array(
-    'name' => 'Adam')
+    'title' => $routes[$name]['title'])
   );
 }
 else {
   header("HTTP/1.0 404 Not Found");
-  echo $twig->render('404.html.twig', array());
+  echo $twig->render('404.html.twig', array('title' => 'Not Found'));
 }
 ?>
