@@ -18,6 +18,9 @@ From the command line, run the following:
 
 `composer install`
 
+Other notes:
+
+- Change `static-routing-starter` in index.php to match your root directory.  If you are pointing your docroot to the "src" directory then comment that line out
 
 ### Neat, Bourbon, Bitters
 
