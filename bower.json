@@ -1,0 +1,23 @@
+{
+  "name": "gulp-bourbon-neat-bitters-starter",
+  "version": "1.0.0",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "*",
+    "neat": "*",
+    "bitters": "*",
+    "normalize-scss": "~3.0.3"
+  }
+}

@@ -39,8 +39,7 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
-# composer
+# node, composer, bower
 vendor
-
-# npm
 node_modules
+bower_components
