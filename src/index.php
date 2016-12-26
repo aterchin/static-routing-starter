@@ -2,7 +2,7 @@
 header("Content-Type: text/html");
 include '../AltoRouter.php';
 $router = new AltoRouter();
-$router->setBasePath('/static-routing-starter/app');
+$router->setBasePath('/static-routing-starter/src');
 
 /* Setup the URL routing. This is production ready. */
 // Main routes that non-customers see
