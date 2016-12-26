@@ -37,7 +37,7 @@ From the command line, run the following:
 
 Then run `gulp serve` on the root of the directory to launch the project in your browser.
 
-
+---
 
 ### Regarding individual setups
 
