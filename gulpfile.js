@@ -46,9 +46,8 @@ gulp.task('compress', function() {
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        server: {
-            baseDir: "./src"
-        }
+      server: "./src"
+      //proxy: "http://local.mysite:8888/"
     });
 });
 

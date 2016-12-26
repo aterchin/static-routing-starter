@@ -2,7 +2,7 @@
 Static website, with basic routing system using AltoRouter, and starter kit for Neat, Bourbon, Bitters.  Gulpfile included for minifying, compressing, browsersyncing etc.
 
 
-### AltoRouter
+## AltoRouter
 
 https://github.com/dannyvankooten/AltoRouter
 
@@ -18,11 +18,8 @@ From the command line, run the following:
 
 `composer install`
 
-Other notes:
 
-- Change `static-routing-starter` in index.php to match your root directory.  If you are pointing your docroot to the "src" directory then comment that line out
-
-### Neat, Bourbon, Bitters
+## Neat, Bourbon, Bitters
 
 https://gulpjs.org/
 
@@ -40,6 +37,12 @@ From the command line, run the following:
 
 Then run `gulp serve` on the root of the directory to launch the project in your browser.
 
-Other notes:
 
-- Add your own javascript scripts to /src/custom
+
+### Regarding individual setups
+
+- Change `static-routing-starter` in index.php to match your root directory. If your webroot is the "src" directory then comment that line out.
+
+- Add your own javascript scripts to "/src/custom"
+
+- browserSync:  If you want to serve from php routing rather than the static html file, in the browserSync options in gulpfile.js comment out the *server* line and uncomment the *proxy* line.  Add your own virtual host URL here.
