@@ -1,5 +1,5 @@
 # static-routing-starter (with CSS preprocessor)
-Static website, with basic routing system using AltoRouter, and starter kit for Neat, Bourbon, Bitters.  Gulpfile included for minifying, compressing, browsersyncing etc.
+Static website, with basic routing system using AltoRouter, and starter kit for Neat, Bourbon, Bitters.  Gulpfile included for minifying, compressing, browsersyncing etc. PHP templating uses Twig files.
 
 
 ## AltoRouter
@@ -10,7 +10,7 @@ If all you need is PHP routing, the only files in the /src directory you care ab
 
 - .htaccess
 - index.php
-- pages/*
+- templates/*
 
 *Requires Composer*
 
