@@ -1,9 +1,27 @@
-{% extends "layouts/base.html.twig" %}
+{% extends "layouts/full-width.html.twig" %}
 
 {% block title %}{{ title }}{% endblock %}
+
 {% block head %}
     {{ parent() }}
+    {# This is just an example of adding to head from a child template #}
 {% endblock %}
+
 {% block content %}
-  <h1>{{ title }}</h1>
+
+  <h1>Welcome to MySite.</h1>
+
+  <div>
+    <img src="http://placehold.it/1200x350" />
+  </div>
+
+  <h2>This is an h2</h2>
+
+  <h3>This is an h3</h3>
+
+  <h4>This is an h4</h4>
+
+  <p><strong>Pellentesque nibh felis, eleifend id, commodo in, interdum vitae, leo.</strong> Praesent eu elit. Ut eu ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas elementum augue nec nisl. Proin auctor lorem at nibh. Curabitur nulla purus, feugiat id, elementum in, lobortis quis, pede. Vivamus sodales adipiscing sapien. Vestibulum posuere nulla eget wisi. Integer volutpat ligula eget enim. Suspendisse vitae arcu.</p>
+
+  <p><a>This is a link.</a></p>
 {% endblock %}

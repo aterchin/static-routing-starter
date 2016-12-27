@@ -18,11 +18,14 @@
     {% endblock %}
   </head>
   <body>
-    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="header">
+      {% block header %}{% endblock %}
+    </div>
+    <div id="main">
+      {% block main %}{% endblock %}
+    </div>
     <div id="footer">
-      {% block footer %}
-        &copy; Copyright 2016 mysite.com
-      {% endblock %}
+      {% block footer %}{% endblock %}
     </div>
   </body>
 </html>

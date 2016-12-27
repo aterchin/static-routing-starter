@@ -43,6 +43,11 @@ $routes = array(
     'path' => '/contact',
     'template' => 'contact',
     'title' => 'Contact'
+  ),
+  'blog' => array(
+    'path' => '/blog',
+    'template' => 'blog',
+    'title' => 'Blog post'
   )
 );
 
