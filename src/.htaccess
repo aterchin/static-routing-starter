@@ -4,7 +4,6 @@ Options +FollowSymLinks
   RewriteEngine On
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule \.(css|js|png|jpg|svg|gif)$ - [L]
-  RewriteCond %{REQUEST_URI} (.*)/$
-  RewriteRule ^ %1 [R=301,L]
+  RewriteRule ^(.*)/$ /$1 [L,R=301]
   RewriteRule . index.php [L]
 </IfModule>
