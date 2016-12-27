@@ -1,26 +1,27 @@
 <?php
 header("Content-Type: text/html");
 
-// require autoload for Twig/Symfony components
+// Require autoload for Twig/Symfony components
 require_once '../vendor/autoload.php';
 $loader = new Twig_Loader_Filesystem('templates');
 $twig = new Twig_Environment($loader);
 
-// get config
+// Get config
 use Symfony\Component\Yaml\Yaml;
 $config = Yaml::parse(file_get_contents('../config.yml'));
 
 include '../AltoRouter.php';
 $router = new AltoRouter();
 
-// set root directory for route URLs
+// Set root directory for route URLs
+// If pointing host to "src" directory, base path setting doesn't matter.
 $root = $config['use_host'] ? '' : '/' . $config['basedir'] . '/src';
 $router->setBasePath($root);
 
 /**
  * URL routes array
  *
- * route_name is array key
+ * Route_name is array key
  */
 $routes = array(
   'home' => array(
