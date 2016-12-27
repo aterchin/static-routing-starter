@@ -9,9 +9,7 @@ https://github.com/dannyvankooten/AltoRouter
 If all you need is PHP routing, the only files in the /src directory you care about are:
 
 - .htaccess
-
 - index.php
-
 - templates/*
 
 *Requires Composer*
@@ -37,13 +35,12 @@ From the command line, run the following:
 
 `bower install`
 
-Then run `gulp serve` on the root of the directory to launch the project in your browser. If "use_host" is set to `false` in the configuration file, you will see the static sample html file instead of your templates.
+Then run `gulp serve` on the root of the directory to launch the project in your browser. If "use_host" is set to `false` in the **config.yml** file, you will see the static sample html file instead of your templates.
 
 ---
 
 ### Regarding individual setups
 
-- Change settings in config.yml file to match your setup
-
+- Change settings in the **config.yml** file to match your setup
 - Add your own javascript scripts to "/src/custom"
 
