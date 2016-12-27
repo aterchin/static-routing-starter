@@ -8,6 +8,10 @@ var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
+// read config
+var yaml = require('js-yaml');
+var fs   = require('fs');
+var config = yaml.safeLoad(fs.readFileSync('config.yml', 'utf8'));
 
 gulp.task('sass', function () {
   return gulp.src('./src/sass/*.scss')
@@ -45,12 +49,13 @@ gulp.task('compress', function() {
 });
 
 gulp.task('browser-sync', function() {
-    browserSync.init({
-      server: "./src"
-      //proxy: "http://local.mysite:8888/"
-    });
+    if (config.use_host) {
+      browserSync.init({ proxy: config.host });
+    }
+    else {
+      browserSync.init({ server: "./src" });
+    }
 });
-
 
 gulp.task('watch', function() {
   // Watch .html files

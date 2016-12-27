@@ -1,0 +1,3 @@
+basedir: 'static-routing-starter'
+host: 'http://local.mysite:8888/'
+use_host: false

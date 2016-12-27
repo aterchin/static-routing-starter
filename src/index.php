@@ -1,13 +1,21 @@
 <?php
 header("Content-Type: text/html");
-include '../AltoRouter.php';
-$router = new AltoRouter();
-$router->setBasePath('/static-routing-starter/src');
 
-// require autoload for Twig
+// require autoload for Twig/Symfony components
 require_once '../vendor/autoload.php';
 $loader = new Twig_Loader_Filesystem('templates');
 $twig = new Twig_Environment($loader);
+
+// get config
+use Symfony\Component\Yaml\Yaml;
+$config = Yaml::parse(file_get_contents('../config.yml'));
+
+include '../AltoRouter.php';
+$router = new AltoRouter();
+
+// set root directory for route URLs
+$root = $config['use_host'] ? '' : '/' . $config['basedir'] . '/src';
+$router->setBasePath($root);
 
 /**
  * URL routes array

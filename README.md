@@ -9,7 +9,9 @@ https://github.com/dannyvankooten/AltoRouter
 If all you need is PHP routing, the only files in the /src directory you care about are:
 
 - .htaccess
+
 - index.php
+
 - templates/*
 
 *Requires Composer*
@@ -35,14 +37,13 @@ From the command line, run the following:
 
 `bower install`
 
-Then run `gulp serve` on the root of the directory to launch the project in your browser.
+Then run `gulp serve` on the root of the directory to launch the project in your browser. If "use_host" is set to `false` in the configuration file, you will see the static sample html file instead of your templates.
 
 ---
 
 ### Regarding individual setups
 
-- Change `static-routing-starter` in index.php to match your root directory. If your webroot is the "src" directory then comment that line out.
+- Change settings in config.yml file to match your setup
 
 - Add your own javascript scripts to "/src/custom"
 
-- browserSync:  If you want to serve from php routing rather than the static html file, in the browserSync options in gulpfile.js comment out the *server* line and uncomment the *proxy* line.  Add your own virtual host URL here.
