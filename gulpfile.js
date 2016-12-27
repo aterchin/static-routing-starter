@@ -60,6 +60,8 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', function() {
   // Watch .html files
   gulp.watch('./src/**/*.html').on('change', browserSync.reload);
+  // Watch .twig templates
+  gulp.watch('./src/templates/**/*.twig').on('change', browserSync.reload);
   // Watch .sass files
   gulp.watch('./src/sass/**/*.scss', ['sass', browserSync.reload]);
   // Watch .js files
