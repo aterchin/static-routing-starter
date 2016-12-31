@@ -17,15 +17,19 @@
       <title>Website Name | {% block title %}{% endblock %}</title>
     {% endblock %}
   </head>
-  <body>
+  <body class="{{ body_classes|default('')|trim }}">
     <div id="header">
-      {% block header %}{% endblock %}
+      {% block header %}
+        {% include 'partials/header.html.twig' %}
+      {% endblock %}
     </div>
     <div id="main">
       {% block main %}{% endblock %}
     </div>
     <div id="footer">
-      {% block footer %}{% endblock %}
+      {% block footer %}
+        {% include 'partials/footer.html.twig' %}
+      {% endblock %}
     </div>
   </body>
 </html>

@@ -1,9 +1,12 @@
 {% extends 'layouts/_base.html.twig' %}
 
-{% set body_classes = ' full-width' ~ body_classes %}
+{% set body_classes = ' one-sidebar' ~ body_classes %}
 
 {% block main %}
   <div id="content" class="content">
     {% block content %}{% endblock %}
+  </div>
+  <div id="sidebar" class="sidebar">
+    {% block sidebar %}{% endblock %}
   </div>
 {% endblock %}
