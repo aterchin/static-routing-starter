@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================================================
    Normalize.scss settings
    ========================================================================== */
@@ -692,6 +693,72 @@ section {
         width: 100%; }
         section#bottom-row #content-1:last-child, section#bottom-row #content-2:last-child {
           margin-right: 0; } }
+
+/**
+ * PX to Rem Sizing
+ *
+ * How to use
+ * font-size: rem(20);
+ *
+ * Outputs —
+ * font-size: 20px;
+ */
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  line-height: 1.5em;
+  word-break: break-word; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333; }
+
+h1,
+h2 {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+
+h1 {
+  font-size: 4.6875rem; }
+
+h2 {
+  font-size: 3.125rem; }
+
+h3 {
+  font-size: 2.1875rem; }
+
+h4 {
+  font-size: 1.5rem; }
+
+h5 {
+  font-size: 1.25rem; }
+
+h6 {
+  font-size: 1rem; }
+
+blockquote {
+  background-color: #f7f7f7;
+  font-style: italic;
+  padding: 20px; }
+
+cite {
+  font-style: italic; }
+
+strong,
+b {
+  font-weight: 600; }
+
+a,
+a:visited {
+  color: #477dca; }
 
 #main {
   background-color: #ffe3ff; }

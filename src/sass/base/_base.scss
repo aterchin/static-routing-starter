@@ -1,8 +1,10 @@
-// Custom Variables
+// Base styles and variables
+@import "colors";
 @import "variables";
+@import "typography";
 
-// Custom Mixins
+// Mixins
 @import "mixins";
 
-// Common Styles
+// Common styles
 @import "common";

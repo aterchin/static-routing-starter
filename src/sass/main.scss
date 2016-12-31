@@ -13,10 +13,15 @@
 // Neat (must include *after* grid-related stuff)
 @import "lib/neat/app/assets/stylesheets/neat";
 
+// Styling included with sample index.html file
 @import "sample/sample";
 
+// All site base elements
 @import "base/base";
 
+// Grid layout styles (full-width, one-sidebar, etc.)
 @import "layouts/layouts";
 
+// Specific components
+//@todo: rename this 'components'?
 @import "modules/modules";
