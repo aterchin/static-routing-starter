@@ -8,7 +8,11 @@
   
     menuToggle.on('click', function(e) {
       e.preventDefault();
-      $('#js-navigation-menu').slideToggle();
+      $('#js-navigation-menu').slideToggle(function(){
+        if($('#js-navigation-menu').is(':hidden')) {
+          $('#js-navigation-menu').removeAttr('style');
+        }
+      });
     });
 
   });
