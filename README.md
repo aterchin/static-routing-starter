@@ -35,7 +35,7 @@ From the command line, run the following:
 
 `bower install`
 
-Then run `gulp serve` in your root directory to launch the project in your browser. If "use_host" is set to `false` in the **config.yml** file, you will see the static sample html page instead of your twig templates.
+Then run `gulp serve` in your root directory to launch the project in your browser. If "use_host" is set to `false` in the **config.yml** file, you will see the static sample html page instead of your twig templates.  If you don't want to change any config settings and bypass browserSync, just run `gulp watch` which will autocompile all your files anyways.
 
 ---
 
