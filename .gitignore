@@ -23,7 +23,7 @@ src/components
 
 ## Sass
 .sass-cache
-.map
+*.map
 
 ## OS X
 .DS_Store
